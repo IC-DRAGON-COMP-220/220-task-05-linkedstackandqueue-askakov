@@ -22,6 +22,8 @@ public interface Stack<T> {
     /**
      * @post all items are removed, this Stack is empty
      */
-    void makeEmpty();
+    void makeEmpty(); 
+    //commit check
+    
 
 }
