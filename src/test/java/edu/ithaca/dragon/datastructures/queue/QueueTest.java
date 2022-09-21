@@ -24,9 +24,9 @@ public class QueueTest {
     @Test
     public void testQueues(){
         int numToTestWith=1000;
-        enqueueDequeueIsEmptyTest(null, numToTestWith);
-        testDequeueOnEmpty(null);
-        testMakeEmpty(null, numToTestWith);
+        enqueueDequeueIsEmptyTest(new LinkedQueue<String>(), numToTestWith);
+        testDequeueOnEmpty(new LinkedQueue<String>());
+        testMakeEmpty(new LinkedQueue<String>(), numToTestWith);
     }
 
     public void enqueueDequeueIsEmptyTest(Queue<String> myQueue, int queueSize){
