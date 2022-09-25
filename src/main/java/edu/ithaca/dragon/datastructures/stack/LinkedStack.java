@@ -1,5 +1,7 @@
 package edu.ithaca.dragon.datastructures.stack;
 
+import java.util.NoSuchElementException;
+
 import edu.ithaca.dragon.datastructures.node.LinkedNode;
 
 public class LinkedStack<T> implements Stack<T>{
@@ -19,8 +21,15 @@ public class LinkedStack<T> implements Stack<T>{
 
     @Override
     public T pop() {
-        // TODO
-        return null;
+        if(isEmpty()){
+            throw new NoSuchElementException();
+
+        }
+        else{
+            T popItem = top.getItem();
+            top = top.getNext();
+            return popItem;
+        }
     }
 
     @Override
@@ -30,7 +39,13 @@ public class LinkedStack<T> implements Stack<T>{
 
     @Override
     public void makeEmpty() {
-        // TODO
+        if(isEmpty()){
+            throw new NoSuchElementException();
+
+        }
+        else{
+            top = null;
+        }
     }
     
 }
